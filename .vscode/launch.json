@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md
+            "name": ".NET Core Launch (SocketServer)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/SocketServer/bin/Debug/net7.0/SocketServer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SocketServer",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        },        
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md
+            "name": ".NET Core Launch (SocketClient)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/SocketClient/bin/Debug/net7.0/SocketClient.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SocketClient",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            // console - what kind of console to use, for example, internalConsole, integratedTerminal, or externalTerminal
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        }
+    ],
+    "compounds": [
+        {
+          "name": "SocketServer & SocketClient",
+          "configurations": [
+            ".NET Core Launch (SocketServer)",
+            ".NET Core Launch (SocketClient)"
+          ],
+          "stopAll": true
+        }
+      ]
+}
